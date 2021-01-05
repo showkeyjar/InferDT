@@ -22,6 +22,38 @@ The following instructions have been tested on Ubuntu 19.04
 sudo apt install g++ cmake minisat2 xdot libzip-dev libboost-dev
 ```
 
+### CentOS 7
+
+search yum install minisat2
+https://centos.pkgs.org/7/lux/minisat2-libs-2.2.1-1.el7.lux.x86_64.rpm.html
+
+git clone https://github.com/agurfinkel/minisat.git
+sudo cp -r minisat/minisat /usr/local/include/ 
+
+
+yum install epel-release
+yum install gcc-c++ cmake xdotool libzip-devel boost-devel
+
+
+sudo echo '[group_kdesig-cmake3_EPEL]
+name=Copr repo for cmake3_EPEL owned by @kdesig
+baseurl=https://copr-be.cloud.fedoraproject.org/results/@kdesig/cmake3_EPEL/epel-7-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/@kdesig/cmake3_EPEL/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1' >> /etc/yum.repos.d/cmake3.repo
+
+yum install cmake3
+
+
+sudo yum install centos-release-scl
+sudo yum install devtoolset-9-gcc*
+scl enable devtoolset-9 bash
+gcc -v
+
 ## Build
 
 ```bash

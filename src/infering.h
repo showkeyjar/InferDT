@@ -37,7 +37,8 @@ class Infering {
         int id;
 
         VarAux() {
-            id = solver->newVar(l_Undef, false);
+            id = solver->newVar(l_Undef==Minisat::lbool(true), false);
+            //id = solver->newVar(l_Undef, false);
         }
 
         static void init(Minisat::Solver *solver) {
@@ -45,7 +46,8 @@ class Infering {
         }
 
         static int newVar() {
-            return solver->newVar(l_Undef, false);
+            return solver->newVar(l_Undef==Minisat::lbool(true), false);
+            //return solver->newVar(l_Undef, false);
         }
 
         friend class Infering;

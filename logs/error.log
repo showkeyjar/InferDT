@@ -1,0 +1,12 @@
+/usr/local/include/minisat/utils/Options.h:285:29: error: unable to find string literal operator 'operator""PRIi64' with 'const char [3]', 'long unsigned int' arguments
+             fprintf(stderr, "%4"PRIi64, range.begin);
+                             ^~~~~~~~~~
+/usr/local/include/minisat/utils/Options.h:291:29: error: unable to find string literal operator 'operator""PRIi64' with 'const char [3]', 'long unsigned int' arguments
+             fprintf(stderr, "%4"PRIi64, range.end);
+                             ^~~~~~~~~~
+/usr/local/include/minisat/utils/Options.h:293:46: error: unable to find string literal operator 'operator""PRIi64' with 'const char [16]', 'long unsigned int' arguments
+         fprintf(stderr, "] (default: %"PRIi64")\n", value);
+                                              ^~~~~
+make[2]: *** [CMakeFiles/InferDT.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/InferDT.dir/all] Error 2
+make: *** [all] Error 2
