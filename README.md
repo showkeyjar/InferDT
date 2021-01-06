@@ -27,8 +27,8 @@ sudo apt install g++ cmake minisat2 xdot libzip-dev libboost-dev
 search yum install minisat2
 https://centos.pkgs.org/7/lux/minisat2-libs-2.2.1-1.el7.lux.x86_64.rpm.html
 
-git clone https://github.com/agurfinkel/minisat.git
-sudo cp -r minisat/minisat /usr/local/include/ 
+git clone https://github.com/zhzdeng/minisat
+sudo cp -r minisat/minisat /usr/local/include/
 
 
 yum install epel-release
@@ -66,13 +66,13 @@ make
 Infer a decision tree with the algorithm *DT_depth* for the dataset "mouse":
 
 ```bash
-./InferDT -d data/mouse.csv infer
+./InferDT -d data/mouse.csv -v infer
 ```
 
 Infer a decision tree with the algorithm *DT_size* for the dataset "car":
 
 ```bash
-./InferDT data/car.csv infer
+./InferDT data/car.csv -v infer
 ```
 
 Run a 10-cross-validation on the dataset "mouse" with the algorithm *DT_size*:
